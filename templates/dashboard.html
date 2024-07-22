@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome, {{ user.username }}</h1>
+    <div class="nav-buttons">
+        {% if user.user_type == 'Driver' %}
+            <a href="{{ url_for('g2_page') }}">G2 Test</a>
+            <a href="{{ url_for('g_page') }}">G Test</a>
+        {% endif %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+{% endblock %}

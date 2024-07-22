@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Sign Up</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="repeated_password">Repeat Password:</label>
+            <input type="password" id="repeated_password" name="repeated_password" required>
+        </div>
+        <div class="form-group">
+            <label for="user_type">User Type:</label>
+            <select id="user_type" name="user_type">
+                <option value="Driver">Driver</option>
+                <option value="Examiner">Examiner</option>
+                <option value="Admin">Admin</option>
+            </select>
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+    <div class="nav-buttons">
+        <a href="{{ url_for('login') }}">Already have an account? Login</a>
+    </div>
+</div>
+{% endblock %}

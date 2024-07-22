@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>G Test Page</h1>
+    <h2>User Information</h2>
+    <p>First Name: {{ user.firstname }}</p>
+    <p>Last Name: {{ user.lastname }}</p>
+    <p>License Number: {{ user.license_no }}</p>
+    <p>Age: {{ user.age }}</p>
+    <h2>Car Information</h2>
+    <p>Make: {{ user.car_details.make }}</p>
+    <p>Model: {{ user.car_details.model }}</p>
+    <p>Year: {{ user.car_details.year }}</p>
+    <p>Plate Number: {{ user.car_details.platno }}</p>
+    <div class="nav-buttons">
+        <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
